@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_book_tutorial/custom_text_tiled.dart';
 
 class InputForm extends StatefulWidget {
   const InputForm({super.key});
@@ -28,19 +29,16 @@ class _InputFormState extends State<InputForm> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            TextField(
-              controller: email,
-              decoration: const InputDecoration(
-                labelText: 'Email',
-              ),
-            ),
-            TextField(
-              controller: password,
-              decoration: const InputDecoration(
-                labelText: 'Password',
-              ),
-              obscureText: true,
-            ),
+            CustomTextFiled(
+              width: double.infinity,
+              height: 50,
+              email: email,
+              labelText: 'Email',),
+            CustomTextFiled(
+              width: double.infinity,
+              height: 50,
+              email: password,
+              labelText: 'Password',),
             ElevatedButton(
               onPressed: () {
                 print('Email: ${email.text}');
